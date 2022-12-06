@@ -30,7 +30,7 @@ for i in range(0, len(lines), 3):
     items.append(list(overlap)[0])
 
 key = 'abcdefghijklmnopqrstuvwxyz'
-key = key + key.upper()
+key += key.upper()
 
 points = 0
 for i in items:
