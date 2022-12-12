@@ -32,8 +32,9 @@ def evaluate_forest(trees, highest_trees = {}):
 #print(f'Part 1: {len(highest_trees)}')
 
 def score_view(los : np.array, height : int):
-    # This is going to assume we are standing to the left of the array
-    if all(height > tree for tree in los):
+    # This is going to assume we are standing to the left of the array.
+    # Basically we seach until there is a tree of the same height or more.
+    if all(height > los):
         return len(los)
     for index, value in enumerate(los):
         if value >= height:
