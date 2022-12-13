@@ -45,8 +45,8 @@ def best_view(trees):
     for i in range(1, len(trees)-1):
         for j in range(1, len(trees)-1):
             h = trees[i,j]
-            trees_left = trees[i, :j][::-1]
-            trees_right = trees[i, j+1:]
+            trees_left = trees[i,:j][::-1]
+            trees_right = trees[i,j+1:]
             trees_up = trees[:i,j][::-1]
             trees_down = trees[i+1:,j]
             score = score_view(trees_left, h) * \
